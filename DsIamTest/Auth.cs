@@ -52,8 +52,8 @@ namespace DsIamTest
 
             PublicAuthCodeGrantRequestBody req = new PublicAuthCodeGrantRequestBody()
             {
-                ClientId = "39084edd-ae38-41a0-9d36-a6fcd120e157",//MyConfig.CLIENT_ID,
-                Code = "eyJ0eXAiOiJNVCIsImFsZyI6IlJTMjU2Iiwia2lkIjoiNjgxODVmZjEtNGU1MS00Y2U5LWFmMWMtNjg5ODEyMjAzMzE3In0.AQsAAAABAAYABwCArQZyBprdSAgAgDmNuQaa3UgCAIfiyfawyGRAjD9xMPGp688VAAEAAAAYAAUAAABRAQAAUgEAAPEAAAAdAAAABQAAAA0AJAAAADM5MDg0ZWRkLWFlMzgtNDFhMC05ZDM2LWE2ZmNkMTIwZTE1NyIAJAAAADM5MDg0ZWRkLWFlMzgtNDFhMC05ZDM2LWE2ZmNkMTIwZTE1NzAAgK0Gcgaa3UgSAAEAAAALAAAAaW50ZXJhY3RpdmU3AFdZHWcUOKRKjHY-Tf7D8zo.HiSMxX22XK5ZtzcsWftZuI3_bcdoR2DOAMKtoL9xjvXnMTEYoSOVO0UJt0Ga7D2JDJaw8qY6q_tsc8TbTkAzDxmHT6I3W8jknBpo8r8jXJEFhMHZMGTWIdcjolFbPMM7rThxQnymCO2LZy96Y5g_jiySvB4U_QlL1dadrSHFNS6iB2-qtriHoqty-R_jvApRp18WFvk2_UGoAs8kOYfnQ17gE8qoXFssWDdORPZbSxPNXZIQgkW80mSbyrLvkRpNY5gfb7tGwNx2-7AAsJ_Q7aCnqOQp31ccnNqNHO7FsLt91bTnEQqi0ZlIEUinXbnYvv3c32_aBakpY7xHiG3_eQ",
+                ClientId = MyConfig.CLIENT_ID,
+                Code = MyConfig.AUTH_CODE,
                 CodeVerifier = "R8zFoqs0yey29G71QITZs3dK1YsdIvFNBfO4D1bukBw",
             };
 
