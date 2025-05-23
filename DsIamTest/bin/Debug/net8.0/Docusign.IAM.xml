@@ -1,0 +1,2079 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Docusign.IAM</name>
+    </assembly>
+    <members>
+        <member name="M:Docusign.IAM.IAgreements.GetAgreementsListAsync(System.String,System.Nullable{System.Int32},System.String,Docusign.IAM.Utils.Retries.RetryConfig)">
+            <summary>
+            Retrieve a list of agreements
+            
+            <remarks>
+            This operation retrieves a list of all agreements available in the system. It provides a high-level overview of each agreement, including its unique identifier (`id`), title, type, status, and involved parties. The list also includes important metadata, such as the agreement&apos;s creation and modification timestamps, and information on the agreement&apos;s source system (e.g., eSign, CLM).<br/>
+            <br/>
+            Each agreement entry includes essential details that allow users to quickly assess the agreements and determine which ones are relevant for their needs. For example, the agreement&apos;s status can help users understand whether an agreement is still active, pending, or completed.<br/>
+            <br/>
+            The response also includes provisions that outline the key legal, financial, and lifecycle conditions, along with custom user-defined fields, providing a comprehensive understanding of each agreement.<br/>
+            <br/>
+            ### Use Cases:<br/>
+            - **Retrieving a list of agreements for integration into external systems**: Export or sync agreement data into other platforms (e.g., CRM, ERP systems) to align business processes across different tools.<br/>
+            - **Providing data for RAG (Retrieval-Augmented Generation) applications or Copilots**: The list of agreements can be a valuable data source for AI/LLM-based applications that answer user queries about agreements. <br/>
+              It allows Copilots to understand what agreements exist and offer insights based on their details.<br/>
+            - **Filtering agreements by type or status**: Determine which agreements are active, pending, or completed, and gather a summary of key provisions across multiple agreements.<br/>
+            - **Auditing or reporting**: Generate a report on agreements based on type, status, or date created, helping with compliance tracking and internal reviews.<br/>
+            - **Metadata tracking**: Track when agreements were created, modified, and by whom, ensuring proper governance and version control.<br/>
+            <br/>
+            ### Key Features:<br/>
+            - **Comprehensive Agreement Overview**: Provides high-level visibility into all agreements, with essential details for each one, including status, type, and involved parties.<br/>
+            - **Metadata and Provisions**: Returns important metadata and provisions (legal, financial, and custom) for each agreement, helping users understand their obligations and contract terms.<br/>
+            - **Source System Information**: Captures details about where the agreement originated (e.g., eSign, CLM), making it easier to integrate and track agreements across different business systems.<br/>
+            - **Data for AI Applications**: The operation is designed to support LLM-powered apps, making it ideal for use in RAG-based applications and Copilots that query agreements for decision-making or information purposes.<br/>
+            
+            </remarks>
+            </summary>
+        </member>
+        <member name="M:Docusign.IAM.IAgreements.GetAgreementAsync(System.String,System.String,Docusign.IAM.Utils.Retries.RetryConfig)">
+            <summary>
+            Retrieve detailed information about a specific agreement
+            
+            <remarks>
+            This operation retrieves detailed information about a specific agreement, identified by its unique `id`. The response provides a comprehensive view of the agreement, including its title, type, status, summary, and the full list of involved parties.<br/>
+            <br/>
+            In addition to general details, the operation returns provisions that define the agreement&apos;s legal, financial, lifecycle, and custom conditions. It also provides key metadata, such as creation and modification timestamps, related agreements, and user-defined or custom attributes, which help represent the structure and context of the agreement.<br/>
+            <br/>
+            The operation is essential for retrieving the full context of an agreement, enabling users to understand the contract&apos;s scope, key provisions, and the legal or financial obligations that have been agreed upon.<br/>
+            <br/>
+            ### Use Cases:<br/>
+            - **Integrating agreement data into external systems**: Sync detailed agreement information, such as legal and financial provisions, into external systems like ERP, CRM, or contract management tools to streamline workflows.<br/>
+            - **Providing detailed data for RAG (Retrieval-Augmented Generation) applications or Copilots**: Retrieve detailed agreement data for use in LLM-based applications that answer specific user queries about their agreements, such as the status of a contract, its provisions, or involved parties.<br/>
+            - **Retrieving the complete details of a specific agreement**: Use the full details of the agreement, including legal and financial provisions, for auditing, compliance, or review purposes.<br/>
+            - **Accessing agreement provisions for verification**: Verify compliance with specific legal or financial terms of the agreement, ensuring that all parties are following the agreed-upon conditions.<br/>
+            - **Tracking agreement changes and history**: Fetch metadata and related agreements to understand the evolution of an agreement, including modifications, associated agreements, and additional context provided by custom fields.<br/>
+            - **Reviewing user-defined or custom attributes**: Examine custom fields or attributes to get more context about the agreement, particularly where the business has defined custom provisions or attributes.<br/>
+            <br/>
+            ### Key Features:<br/>
+            - **Detailed Agreement Overview**: Provides a comprehensive view of a specific agreement, including its title, type, status, summary, and more.<br/>
+            - **Provisions for Legal, Financial, and Lifecycle Conditions**: Includes the full set of provisions that define the terms and conditions of the agreement, making it ideal for compliance and auditing purposes.<br/>
+            - **Metadata and History**: Tracks the agreement’s history through metadata such as creation and modification dates and user-defined fields.<br/>
+            - **Data Source for AI Applications**: Enables LLM-based applications to access granular agreement data, providing AI/ML-based solutions (such as Copilots) with the necessary context to answer detailed queries about an agreement.<br/>
+            - **Involved Parties and Related Agreements**: Lists all parties involved and related agreements, allowing users to see all associated legal documents and relationships between agreements.<br/>
+            
+            </remarks>
+            </summary>
+        </member>
+        <member name="M:Docusign.IAM.IAgreements.DeleteAgreementAsync(System.String,System.String,Docusign.IAM.Utils.Retries.RetryConfig)">
+            <summary>
+            Delete a specific agreement
+            
+            <remarks>
+            This operation safely deletes an agreement. This action conforms to GDPR and CCPA compliance requirements.<br/>
+            
+            </remarks>
+            </summary>
+        </member>
+        <member name="M:Docusign.IAM.IAgreements.CreateAgreementSummaryAsync(System.String,System.String,Docusign.IAM.Utils.Retries.RetryConfig)">
+            <summary>
+            Create an AI-generated summary of an agreement document
+            
+            <remarks>
+            This operation request an AI-generated summary of the specified agreement document. <br/>
+            The summary is intended to provide a concise overview of the original agreement’s content <br/>
+            and key points; however, it may not capture all details or legal nuances. <br/>
+            <br/>
+            **Important**: By invoking this operation, you acknowledge and accept the <br/>
+            <a href="https://www.docusign.com/legal/terms-and-conditions/ai-attachment-docusign-services">Docusign AI Terms and Conditions</a>. <br/>
+            Please refer to the original agreement for any legally binding information.<br/>
+            
+            </remarks>
+            </summary>
+        </member>
+        <member name="M:Docusign.IAM.IAuth.GetTokenFromConfidentialAuthCodeAsync(Docusign.IAM.Models.Requests.GetTokenFromConfidentialAuthCodeSecurity,Docusign.IAM.Models.Components.ConfidentialAuthCodeGrantRequestBody,System.String,Docusign.IAM.Utils.Retries.RetryConfig)">
+            <summary>
+            Obtains an access token from the Docusign API using an authorization code.
+            
+            <remarks>
+            Obtains an access token from the Docusign API using the confidential flow.<br/>
+            For the developer environment, the URI is https://account-d.docusign.com/oauth/token<br/>
+            For the production environment, the URI is https://account.docusign.com/oauth/token<br/>
+            You do not need an integration key to obtain an access token.
+            </remarks>
+            </summary>
+        </member>
+        <member name="M:Docusign.IAM.IAuth.GetTokenFromPublicAuthCodeAsync(Docusign.IAM.Models.Components.PublicAuthCodeGrantRequestBody,System.String,Docusign.IAM.Utils.Retries.RetryConfig)">
+            <summary>
+            Obtains an access token from the Docusign API using an authorization code.
+            
+            <remarks>
+            Obtains an access token from the Docusign API using the confidential flow.<br/>
+            For the developer environment, the URI is https://account-d.docusign.com/oauth/token<br/>
+            For the production environment, the URI is https://account.docusign.com/oauth/token<br/>
+            You do not need an integration key to obtain an access token.
+            </remarks>
+            </summary>
+        </member>
+        <member name="M:Docusign.IAM.IAuth.GetTokenFromJwtGrantAsync(Docusign.IAM.Models.Requests.JWTGrant,System.String,Docusign.IAM.Utils.Retries.RetryConfig)">
+            <summary>
+            Obtains an access token from the Docusign API using a JWT grant.
+            
+            <remarks>
+            Obtains an access token from the Docusign API.<br/>
+                                                                                                                                  <br/>
+            For the developer environment, the URI is https://account-d.docusign.com/oauth/token<br/>
+                                                                                                                                  <br/>
+            For the production environment, the URI is https://account.docusign.com/oauth/token<br/>
+                                                                                                                                  <br/>
+                                                                                                                                  <br/>
+            You do not need an integration key to obtain an access token.
+            </remarks>
+            </summary>
+        </member>
+        <member name="M:Docusign.IAM.IAuth.GetTokenFromRefreshTokenAsync(Docusign.IAM.Models.Requests.AuthorizationCodeGrant,Docusign.IAM.Models.Requests.GetTokenFromRefreshTokenSecurity,System.String,Docusign.IAM.Utils.Retries.RetryConfig)">
+            <summary>
+            Obtains an access token from the Docusign API using an authorization code.
+            
+            <remarks>
+            Obtains an access token from the Docusign API.<br/>
+            For the developer environment, the URI is https://account-d.docusign.com/oauth/token<br/>
+            For the production environment, the URI is https://account.docusign.com/oauth/token<br/>
+            <br/>
+            You do not need an integration key to obtain an access token.
+            </remarks>
+            </summary>
+        </member>
+        <member name="M:Docusign.IAM.IAuth.GetUserInfoAsync(System.String,Docusign.IAM.Utils.Retries.RetryConfig)">
+            <summary>
+            Get user information
+            
+            <remarks>
+            This endpoint retrieves user information from the Docusign API using an access token.<br/>
+            For the developer environment, the URI is https://account-d.docusign.com/oauth/userinfo<br/>
+            For the production environment, the URI is https://account.docusign.com/oauth/userinfo
+            </remarks>
+            </summary>
+        </member>
+        <member name="F:Docusign.IAM.Auth.GetTokenFromConfidentialAuthCodeServerList">
+            <summary>
+            List of server URLs available for the GetTokenFromConfidentialAuthCode operation.
+            </summary>
+        </member>
+        <member name="F:Docusign.IAM.Auth.GetTokenFromPublicAuthCodeServerList">
+            <summary>
+            List of server URLs available for the GetTokenFromPublicAuthCode operation.
+            </summary>
+        </member>
+        <member name="F:Docusign.IAM.Auth.GetTokenFromJWTGrantServerList">
+            <summary>
+            List of server URLs available for the GetTokenFromJWTGrant operation.
+            </summary>
+        </member>
+        <member name="F:Docusign.IAM.Auth.GetTokenFromRefreshTokenServerList">
+            <summary>
+            List of server URLs available for the GetTokenFromRefreshToken operation.
+            </summary>
+        </member>
+        <member name="F:Docusign.IAM.Auth.GetUserInfoServerList">
+            <summary>
+            List of server URLs available for the GetUserInfo operation.
+            </summary>
+        </member>
+        <member name="T:Docusign.IAM.IDocusignIamSDK">
+            <summary>
+            Docusign IAM API: Docusign IAM API
+            </summary>
+        </member>
+        <member name="T:Docusign.IAM.SDKConfig.Server">
+            <summary>
+            Server identifiers available to the SDK.
+            </summary>
+        </member>
+        <member name="F:Docusign.IAM.SDKConfig.ServerMap">
+            <summary>
+            Server URLs available to the SDK.
+            </summary>
+        </member>
+        <member name="T:Docusign.IAM.DocusignIamSDK">
+            <summary>
+            Docusign IAM API: Docusign IAM API
+            </summary>
+        </member>
+        <member name="M:Docusign.IAM.EnumExtensions.ToEnumMemberValue(System.Enum)">
+            <summary>
+            Gets the string value from the EnumMemberAttribute of an enum value.
+            </summary>
+            <param name="val">The enum value to get the string representation for.</param>
+            <returns>
+            The Value property from the EnumMemberAttribute if present;
+            otherwise, the string representation of the enum value.
+            </returns>
+        </member>
+        <member name="T:Docusign.IAM.Hooks.HookRegistration">
+            <summary>
+            Hook Registration File.
+            </summary>
+            <remarks>
+            This file is only ever generated once on the first generation and then is free to be modified.
+            Any hooks you wish to add should be registered in the InitHooks function. Feel free to define them
+            in this file or in separate files in the Hooks folder.
+            </remarks>
+        </member>
+        <member name="M:Docusign.IAM.Hooks.HookRegistration.InitHooks(Docusign.IAM.Hooks.IHooks)">
+            <summary>
+            Initializes hooks.
+            </summary>
+            <remarks>
+            Add hooks by calling `Docusign.Hooks.Register&lt;HookInterface&gt;(myHook);`
+            where `I&lt;HookInterface&gt;` is one of the following interfaces defined in HookTypes.cs:
+              - ISDKInitHook
+              - IBeforeRequestHook
+              - IAfterSuccess
+              - IAfterError
+            and `myHook` an instance that implements that specific interface.
+            </remarks>
+        </member>
+        <member name="T:Docusign.IAM.Hooks.ISDKInitHook">
+            <summary>
+            SDKInit hook is called when the SDK is initializing.
+            The hook can modify and return a new baseUrl and HTTP client to be used by the SDK.
+            </summary>
+        </member>
+        <member name="T:Docusign.IAM.Hooks.IBeforeRequestHook">
+            <summary>
+            BeforeRequestAsync hook is called before the SDK sends a request.
+            The hook can modify the request before it is sent or throw an exception to stop the request from being sent.
+            </summary>
+        </member>
+        <member name="T:Docusign.IAM.Hooks.IAfterSuccessHook">
+            <summary>
+            AfterSuccessAsync is called after the SDK receives a response.
+            The hook can modify the response before it is handled or throw an exception to stop the response from being handled.
+            </summary>
+        </member>
+        <member name="T:Docusign.IAM.Hooks.IAfterErrorHook">
+            <summary>
+            AfterErrorAsync is called after the SDK encounters an error, or a non-successful response.
+            The hook can modify the response, if available, otherwise modify the error.
+            All hooks are called sequentially. If an error is returned, it will be passed to the subsequent hook implementing IAfterErrorHook.
+            If you want to prevent other AfterError hooks from being run, you can throw an FailEarlyException instead.
+            </summary>
+        </member>
+        <member name="T:Docusign.IAM.Hooks.OAuthTokenRequestHook">
+            <summary>
+            Hook that intercepts GetTokenFromRefreshToken and
+            GetTokenFromConfidentialAuthCode requests in order to combine the clientId
+            and secretKey into a Basic Auth header.
+            </summary>
+        </member>
+        <member name="T:Docusign.IAM.Models.Components.Agreement">
+            <summary>
+            The Agreement component represents a comprehensive overview of a contractual document, detailing its unique identifiers, key properties, parties involved, <br/>
+            
+            <remarks>
+            and specific provisions. It includes general information such as the title, type, status, and important dates like effective and expiration dates. <br/>
+            The component also incorporates various provisions—legal, financial, lifecycle, and custom—along with metadata, external references, and related documents <br/>
+            to offer a full representation of the structure and context of an agreement.<br/>
+            
+            </remarks>
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Agreement.Title">
+            <summary>
+            Title of the agreement document, summarizing its purpose.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Agreement.FileName">
+            <summary>
+            The file name of the agreement.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Agreement.Type">
+            <summary>
+            The type of agreement.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Agreement.Category">
+            <summary>
+            Server-defined category based on the agreement type.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Agreement.Summary">
+            <summary>
+            A detailed summary of the agreement&apos;s key provisions and scope.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Agreement.Status">
+            <summary>
+            Current status of the agreement (e.g., PENDING, COMPLETE, INACTIVE)
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Agreement.Parties">
+            <summary>
+            A list of parties involved in the agreement.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Agreement.Provisions">
+            <summary>
+            &quot;The conditions or rules written in a legal agreement. The set of possible provisions is determined by the agreement type. <br/>
+            
+            <remarks>
+            This set of provisions can change dynamically.&quot;<br/>
+            
+            </remarks>
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Agreement.AdditionalUserDefinedData">
+            <summary>
+            A generic map/dict. The key is a string, and the value can be of any type, including strings, booleans, numbers, arrays, or objects
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Agreement.AdditionalCustomClmData">
+            <summary>
+            A generic map/dict. The key is a string, and the value can be of any type, including strings, booleans, numbers, arrays, or objects
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Agreement.AdditionalCustomEsignData">
+            <summary>
+            A generic map/dict. The key is a string, and the value can be of any type, including strings, booleans, numbers, arrays, or objects
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Agreement.Languages">
+            <summary>
+            List of languages applicable to the agreement, identified using BCP-47 language codes.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Agreement.SourceName">
+            <summary>
+            The name of the source system who creates this entity, e.g. eSign, CLM, or Salesforce.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Agreement.SourceId">
+            <summary>
+            The ID of the entity in the source system that this entity is associated with. For example, it could be an ID of the envelope in eSign.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Agreement.SourceAccountId">
+            <summary>
+            The Account ID of the source system who creates this entity, e.g. eSign Account ID
+            </summary>
+        </member>
+        <member name="T:Docusign.IAM.Models.Components.AgreementsResponse">
+            <summary>
+            A collection of agreements.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.AgreementsResponse.Data">
+            <summary>
+            A list of agreements
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.AgreementsResponse.ResponseMetadata">
+            <summary>
+            Control information and metadata for the response.
+            </summary>
+        </member>
+        <member name="T:Docusign.IAM.Models.Components.AgreementSummary">
+            <summary>
+            A high-level, AI-generated summary of an agreement document.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.AgreementSummary.Summary">
+            <summary>
+            An AI-generated summary of the agreement. This summary is provided for convenience <br/>
+            
+            <remarks>
+            and may not capture every detail of the original agreement.<br/>
+            
+            </remarks>
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.AuthorizationCodeGrantResponse.AccessToken">
+            <summary>
+            The value of the access token. This value will be added to the Authorization header of all Docusign API calls.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.AuthorizationCodeGrantResponse.TokenType">
+            <summary>
+            The type of token. For access tokens, the value of this will be Bearer.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.AuthorizationCodeGrantResponse.RefreshToken">
+            <summary>
+            The refresh token.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.AuthorizationCodeGrantResponse.ExpiresIn">
+            <summary>
+            The number of seconds until the access token expires.
+            </summary>
+        </member>
+        <member name="F:Docusign.IAM.Models.Components.AuthScope.AdmStoreUnifiedRepoRead">
+            <summary>
+            Allows read access to the unified repository.
+            </summary>
+        </member>
+        <member name="F:Docusign.IAM.Models.Components.AuthScope.AdmStoreUnifiedRepoWrite">
+            <summary>
+            Allows write access to the unified repository.
+            </summary>
+        </member>
+        <member name="F:Docusign.IAM.Models.Components.AuthScope.AowManage">
+            <summary>
+            Allows management of advanced workflow operations.
+            </summary>
+        </member>
+        <member name="F:Docusign.IAM.Models.Components.AuthScope.Impersonation">
+            <summary>
+            Required for applications that impersonate users to perform API
+            calls. Used in JWT Grant authentication.
+            </summary>
+        </member>
+        <member name="F:Docusign.IAM.Models.Components.AuthScope.ModelsRead">
+            <summary>
+            Used to the read model schema.
+            </summary>
+        </member>
+        <member name="F:Docusign.IAM.Models.Components.AuthScope.Signature">
+            <summary>
+            Required to call most eSignature REST API endpoints
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.CancelWorkflowInstanceResponse.Message">
+            <summary>
+            A message confirming the instance was canceled, including the instance and workflow IDs
+            </summary>
+        </member>
+        <member name="T:Docusign.IAM.Models.Components.ConfidentialAuthCodeGrantRequestBody">
+            <summary>
+            The request body for the confidential authorization code grant type.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.ConfidentialAuthCodeGrantRequestBody.GrantType">
+            <summary>
+            The grant type. This value must be set to &quot;authorization_code&quot;.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.ConfidentialAuthCodeGrantRequestBody.Code">
+            <summary>
+            The authorization code supplied to the callback.
+            </summary>
+        </member>
+        <member name="T:Docusign.IAM.Models.Components.ConfidentialAuthCodeGrantRequestBodyGrantType">
+            <summary>
+            The grant type. This value must be set to &quot;authorization_code&quot;.
+            </summary>
+        </member>
+        <member name="T:Docusign.IAM.Models.Components.CurrencyCode">
+            <summary>
+            &apos;ISO 4217 codes. From https://en.wikipedia.org/wiki/ISO_4217<br/>
+            
+            <remarks>
+            https://www.currency-iso.org/en/home/tables/table-a1.html&apos;<br/>
+            
+            </remarks>
+            </summary>
+        </member>
+        <member name="T:Docusign.IAM.Models.Components.DefaultValue">
+            <summary>
+            The default value for the input field if one is provided. This can be a string, number,<br/>
+            
+            <remarks>
+            boolean, object, or array. If no value is provided during the trigger, the workflow may<br/>
+            use this default value.<br/>
+            
+            </remarks>
+            </summary>
+        </member>
+        <member name="T:Docusign.IAM.Models.Components.ExtensionPolicy">
+            <summary>
+            Indicates if the field is required to sign the document
+            </summary>
+        </member>
+        <member name="T:Docusign.IAM.Models.Components.FieldDataType">
+            <summary>
+            The data type expected for the input field. This indicates whether the input should<br/>
+            
+            <remarks>
+            be a string, number, boolean, object, or array, ensuring the data is passed in the<br/>
+            correct format.<br/>
+            
+            </remarks>
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.HTTPMetadata.Response">
+            <summary>
+            Raw HTTP response; suitable for custom response parsing
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.HTTPMetadata.Request">
+            <summary>
+            Raw HTTP request; suitable for debugging
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.JWTGrantResponse.AccessToken">
+            <summary>
+            The value of the access token. This value will be added to the Authorization header of all Docusign API calls.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.JWTGrantResponse.TokenType">
+            <summary>
+            The type of token. For access tokens, the value of this will be Bearer.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.JWTGrantResponse.ExpiresIn">
+            <summary>
+            The number of seconds until the access token expires.
+            </summary>
+        </member>
+        <member name="T:Docusign.IAM.Models.Components.Metadata">
+            <summary>
+            Additional metadata related to this workflow instance
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Metadata.WorkflowCreatedBy">
+            <summary>
+            Identifier of the user who originally created the workflow definition
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Metadata.WorkflowVersion">
+            <summary>
+            Version string of the deployed workflow
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Metadata.WorkflowMetadataId">
+            <summary>
+            Identifier for workflow definition metadata in the system
+            </summary>
+        </member>
+        <member name="T:Docusign.IAM.Models.Components.Method">
+            <summary>
+            The HTTP method used to trigger the workflow. This defines the type of request<br/>
+            
+            <remarks>
+            that will initiate the workflow (e.g., GET, POST).<br/>
+            
+            </remarks>
+            </summary>
+        </member>
+        <member name="T:Docusign.IAM.Models.Components.Party">
+            <summary>
+            A party is a person, group, or organization that is involved in a contract and has legally binding obligations and responsibilities. They also seek to benefit from the agreement.<br/>
+            
+            <remarks>
+            
+            </remarks>
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Party.Id">
+            <summary>
+            Unique identifier for the party, mapped to the party entity reference.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Party.NameInAgreement">
+            <summary>
+            Name of the party as it appears in the agreement.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Party.PreferredName">
+            <summary>
+            Formal name of the party.
+            </summary>
+        </member>
+        <member name="T:Docusign.IAM.Models.Components.PaymentTermsDueDate">
+            <summary>
+            Terms specifying the payment due date, based on a defined number of days or other conditions.
+            </summary>
+        </member>
+        <member name="T:Docusign.IAM.Models.Components.Provisions">
+            <summary>
+            &quot;The conditions or rules written in a legal agreement. The set of possible provisions is determined by the agreement type. <br/>
+            
+            <remarks>
+            This set of provisions can change dynamically.&quot;<br/>
+            
+            </remarks>
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Provisions.AssignmentType">
+            <summary>
+            The type of assignment rights in the agreement (e.g., transferability)
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Provisions.AssignmentChangeOfControl">
+            <summary>
+            Provisions related to changes in control of the assigning party
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Provisions.AssignmentTerminationRights">
+            <summary>
+            Provisions for the termination of assignment rights
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Provisions.ConfidentialityObligationPeriod">
+            <summary>
+            A subset of ISO 8601 duration. Fractional or negative values are not supported.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Provisions.GoverningLaw">
+            <summary>
+            The governing law clause identifies the substantive law that will govern the rights and obligations of the parties to the agreement.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Provisions.Jurisdiction">
+            <summary>
+            A jurisdiction clause expressly sets out which courts or tribunals have the power to hear a dispute which arises under the agreement.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Provisions.NdaType">
+            <summary>
+            Type of non-disclosure agreement (e.g., unilateral, bilateral).
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Provisions.AnnualAgreementValue">
+            <summary>
+            Total annual value of the agreement.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Provisions.AnnualAgreementValueCurrencyCode">
+            <summary>
+            &apos;ISO 4217 codes. From https://en.wikipedia.org/wiki/ISO_4217<br/>
+            
+            <remarks>
+            https://www.currency-iso.org/en/home/tables/table-a1.html&apos;<br/>
+            
+            </remarks>
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Provisions.TotalAgreementValue">
+            <summary>
+            Total value of the agreement.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Provisions.TotalAgreementValueCurrencyCode">
+            <summary>
+            &apos;ISO 4217 codes. From https://en.wikipedia.org/wiki/ISO_4217<br/>
+            
+            <remarks>
+            https://www.currency-iso.org/en/home/tables/table-a1.html&apos;<br/>
+            
+            </remarks>
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Provisions.PaymentTermsDueDate">
+            <summary>
+            Terms specifying the payment due date, based on a defined number of days or other conditions.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Provisions.CanChargeLatePaymentFees">
+            <summary>
+            Indicates if late payment fees can be charged.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Provisions.LatePaymentFeePercent">
+            <summary>
+            Percentage fee charged on late payments.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Provisions.LiabilityCapFixedAmount">
+            <summary>
+            Maximum liability cap in the agreement
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Provisions.LiabilityCapCurrencyCode">
+            <summary>
+            &apos;ISO 4217 codes. From https://en.wikipedia.org/wiki/ISO_4217<br/>
+            
+            <remarks>
+            https://www.currency-iso.org/en/home/tables/table-a1.html&apos;<br/>
+            
+            </remarks>
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Provisions.LiabilityCapMultiplier">
+            <summary>
+            Multiplier applied to calculate the liability cap
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Provisions.PriceCapPercentIncrease">
+            <summary>
+            Maximum allowed percentage increase in prices, limited between 0 and 100.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Provisions.RenewalType">
+            <summary>
+            Specifies the type of renewal (e.g., automatic, manual).
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Provisions.RenewalNoticeDate">
+            <summary>
+            Calculated field based on renewal notice period. (agreement expiration date - renewal notice period duration)
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Provisions.RenewalAdditionalInfo">
+            <summary>
+            Additional information related to the renewal process.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Provisions.TerminationPeriodForCause">
+            <summary>
+            The specific duration that a party has to give notice before terminating the agreement due to a significant breach or violation of terms. <br/>
+            
+            <remarks>
+            This period allows the other party to address the cause or prepare for termination.<br/>
+            
+            </remarks>
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Provisions.TerminationPeriodForConvenience">
+            <summary>
+            Specifies the required notice period that a party must provide before terminating the agreement for convenience, without cause, under the terms outlined in the contract.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Provisions.EffectiveDate">
+            <summary>
+            The date when the terms of the agreement start to apply and become legally binding.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Provisions.ExpirationDate">
+            <summary>
+            The date when the agreement ends and is no longer valid or enforceable.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Provisions.ExecutionDate">
+            <summary>
+            The date when the agreement is signed by all parties, making it officially binding. This is not necessarily the same as the effective date.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Provisions.TermLength">
+            <summary>
+            Overall duration of the agreement.
+            </summary>
+        </member>
+        <member name="T:Docusign.IAM.Models.Components.PublicAuthCodeGrantRequestBody">
+            <summary>
+            This grant uses Proof Key for Code Exchange (PKCE) to authenticate securely without requiring a client secret.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.PublicAuthCodeGrantRequestBody.GrantType">
+            <summary>
+            The grant type. This value must be set to &quot;authorization_code&quot;.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.PublicAuthCodeGrantRequestBody.ClientId">
+            <summary>
+            The client ID of the application.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.PublicAuthCodeGrantRequestBody.Code">
+            <summary>
+            The authorization code supplied to the callback.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.PublicAuthCodeGrantRequestBody.CodeVerifier">
+            <summary>
+            The code verifier used to authenticate the request. This value is generated by the client and must be included in the request.
+            </summary>
+        </member>
+        <member name="T:Docusign.IAM.Models.Components.PublicAuthCodeGrantRequestBodyGrantType">
+            <summary>
+            The grant type. This value must be set to &quot;authorization_code&quot;.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.ResourceMetadata.CreatedAt">
+            <summary>
+            Timestamp when the agreement document was created.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.ResourceMetadata.CreatedBy">
+            <summary>
+            User ID of the person who created the agreement document.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.ResourceMetadata.ModifiedAt">
+            <summary>
+            Timestamp when the agreement document was last modified.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.ResourceMetadata.ModifiedBy">
+            <summary>
+            User ID of the person who last modified the agreement document.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.ResourceMetadata.RequestId">
+            <summary>
+            Unique identifier for the request, useful for tracking and debugging.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.ResourceMetadata.ResponseTimestamp">
+            <summary>
+            The timestamp indicating when the response was generated.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.ResourceMetadata.ResponseDurationMs">
+            <summary>
+            The duration of time, in milliseconds, that the server took to process and respond <br/>
+            
+            <remarks>
+            to the request. This is measured from the time the server received the request <br/>
+            until the time the response was sent.<br/>
+            
+            </remarks>
+            </summary>
+        </member>
+        <member name="T:Docusign.IAM.Models.Components.ResponseMetadata">
+            <summary>
+            Control information and metadata for the response.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.ResponseMetadata.PageLimit">
+            <summary>
+            The maximum number of items that can be returned in a single page.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.ResponseMetadata.PageTokenNext">
+            <summary>
+            The continuation token used to retrieve a page in a paginated response.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.ResponseMetadata.RequestId">
+            <summary>
+            Unique identifier for the request, useful for tracking and debugging.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.ResponseMetadata.ResponseTimestamp">
+            <summary>
+            The timestamp indicating when the response was generated.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.ResponseMetadata.ResponseDurationMs">
+            <summary>
+            The duration of time, in milliseconds, that the server took to process and respond <br/>
+            
+            <remarks>
+            to the request. This is measured from the time the server received the request <br/>
+            until the time the response was sent.<br/>
+            
+            </remarks>
+            </summary>
+        </member>
+        <member name="T:Docusign.IAM.Models.Components.SupportedOperation">
+            <summary>
+            The operation that the field supports.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Tab.TabType">
+            <summary>
+            Indicates the type of tab
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Tab.ValidationPattern">
+            <summary>
+            A regular expression used to validate input for the tab.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Tab.ValidationMessage">
+            <summary>
+            The message displayed if the custom tab fails input validation
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Tab.TabLabel">
+            <summary>
+            The label associated to a verification field in a document.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Tab.Radios">
+            <summary>
+            The radio button properties for the tab (if the tab is of radio type)
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.TabConnectedFieldsData.TypeSystemNamespace">
+            <summary>
+            The fully qualified namespace for the type system being verified.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.TabConnectedFieldsData.TypeName">
+            <summary>
+            Name of the type being verified.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.TabConnectedFieldsData.SupportedOperation">
+            <summary>
+            The operation that the field supports.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.TabConnectedFieldsData.PropertyName">
+            <summary>
+            The name of the individual field being verified.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.TabConnectedFieldsData.SupportedUri">
+            <summary>
+            Indicates the type verification url of the field.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.TabConnectionInstance.ConnectionKey">
+            <summary>
+            Identifies an extension app&apos;s unique connection key.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.TabConnectionInstance.ConnectionValue">
+            <summary>
+            Identifies an extension app&apos;s connection instance.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.TabExtensionData.ExtensionGroupId">
+            <summary>
+            A unique UUID for each tab group. Tabs associated with the same model or concept will share the same extensionGroupId.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.TabExtensionData.ActionInputKey">
+            <summary>
+            Determines input data key required for data verification.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.TabExtensionData.ExtensionPolicy">
+            <summary>
+            Indicates if the field is required to sign the document
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.TabExtensionData.PublisherName">
+            <summary>
+            Publisher of the extension app.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.TabExtensionData.ApplicationName">
+            <summary>
+            Name of the extension app.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.TabExtensionData.ActionName">
+            <summary>
+            Name of an action in an extension app.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.TabExtensionData.ExtensionContract">
+            <summary>
+            Indicates the  template that defines an extension.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.TabExtensionData.ActionContract">
+            <summary>
+            Indicates the template defining an action.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.TabExtensionData.ExtensionName">
+            <summary>
+            Name of the extension.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.TabExtensionData.RequiredForExtension">
+            <summary>
+            A boolean value that indicates if the field must pass verification to sign the document.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.TabExtensionData.ConnectionInstances">
+            <summary>
+            Array representing the extension app connection name and instance.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.TabInfo.AppId">
+            <summary>
+            Unique ID of the installed extension app
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.TabInfo.Tabs">
+            <summary>
+            Tab data representing the tabs associated with installed apps in the account
+            </summary>
+        </member>
+        <member name="T:Docusign.IAM.Models.Components.TriggerEventType">
+            <summary>
+            The type of event that triggers the workflow. In this case, the workflow is initiated<br/>
+            
+            <remarks>
+            by an HTTP request. Future iterations may support additional event types beyond HTTP.<br/>
+            
+            </remarks>
+            </summary>
+        </member>
+        <member name="T:Docusign.IAM.Models.Components.TriggerHttpConfig">
+            <summary>
+            Configuration details specific to HTTP-triggered workflows. This object describes the<br/>
+            
+            <remarks>
+            HTTP method and URL that will trigger the workflow, providing the endpoint and method<br/>
+            that should be used to initiate the workflow.<br/>
+            
+            </remarks>
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.TriggerHttpConfig.Method">
+            <summary>
+            The HTTP method used to trigger the workflow. This defines the type of request<br/>
+            
+            <remarks>
+            that will initiate the workflow (e.g., GET, POST).<br/>
+            
+            </remarks>
+            </summary>
+        </member>
+        <member name="T:Docusign.IAM.Models.Components.TriggerInputs">
+            <summary>
+            A key-value pair where the key is the `field_name` defined in the `trigger_input_schema` of the workflow definition,<br/>
+            
+            <remarks>
+            and the value is the actual input data. Supported types include string, number, boolean, object, or array.<br/>
+            
+            </remarks>
+            </summary>
+        </member>
+        <member name="T:Docusign.IAM.Models.Components.TriggerInputSchema">
+            <summary>
+            Array of fields required as inputs to trigger the workflow, including field names, data types, and default values.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.TriggerInputSchema.FieldName">
+            <summary>
+            The name of the input field expected by the workflow. This key must match the name<br/>
+            
+            <remarks>
+            provided in the `trigger_inputs` when triggering the workflow.<br/>
+            
+            </remarks>
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.TriggerInputSchema.FieldDataType">
+            <summary>
+            The data type expected for the input field. This indicates whether the input should<br/>
+            
+            <remarks>
+            be a string, number, boolean, object, or array, ensuring the data is passed in the<br/>
+            correct format.<br/>
+            
+            </remarks>
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.TriggerInputSchema.DefaultValue">
+            <summary>
+            The default value for the input field if one is provided. This can be a string, number,<br/>
+            
+            <remarks>
+            boolean, object, or array. If no value is provided during the trigger, the workflow may<br/>
+            use this default value.<br/>
+            
+            </remarks>
+            </summary>
+        </member>
+        <member name="T:Docusign.IAM.Models.Components.TriggerWorkflow">
+            <summary>
+            The input information needed to trigger a new instance of a Maestro workflow.<br/>
+            
+            <remarks>
+            This request body contains the metadata to describe the instance being created,<br/>
+            along with the input data required to trigger the workflow.<br/>
+            <br/>
+            - `instance_name` provides a user-defined name for the workflow instance.<br/>
+            - `trigger_inputs` contains the key-value pairs corresponding to the inputs required by the workflow, as described in the `trigger_input_schema` from the workflow definition.<br/>
+            
+            </remarks>
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.TriggerWorkflow.InstanceName">
+            <summary>
+            A descriptive name for the specific instance of the workflow being triggered.<br/>
+            
+            <remarks>
+            This is typically used for identification and tracking purposes.<br/>
+            Example: &quot;User Registration Workflow Instance&quot;<br/>
+            
+            </remarks>
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.TriggerWorkflow.TriggerInputs">
+            <summary>
+            Key-value pairs representing the input data required to trigger the workflow.<br/>
+            
+            <remarks>
+            The keys correspond to the `field_name` values defined in the `trigger_input_schema` of the workflow definition.<br/>
+            The values should match the specified `field_data_type` (e.g., string, number, boolean).<br/>
+            Example: {&quot;name&quot;: &quot;John Doe&quot;, &quot;email&quot;: &quot;johndoe@example.com&quot;}<br/>
+            
+            </remarks>
+            </summary>
+        </member>
+        <member name="T:Docusign.IAM.Models.Components.TriggerWorkflowSuccess">
+            <summary>
+            Control information and metadata for the response.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.TriggerWorkflowSuccess.InstanceUrl">
+            <summary>
+            A fully-qualified URL that can be used to access or interact with this<br/>
+            
+            <remarks>
+            workflow instance while it is running. This URL may provide access to<br/>
+            additional details, actions, or logs related to the workflow execution.<br/>
+            
+            </remarks>
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.TriggerWorkflowSuccess.PageLimit">
+            <summary>
+            The maximum number of items that can be returned in a single page.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.TriggerWorkflowSuccess.PageTokenNext">
+            <summary>
+            The continuation token used to retrieve a page in a paginated response.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.TriggerWorkflowSuccess.RequestId">
+            <summary>
+            Unique identifier for the request, useful for tracking and debugging.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.TriggerWorkflowSuccess.ResponseTimestamp">
+            <summary>
+            The timestamp indicating when the response was generated.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.TriggerWorkflowSuccess.ResponseDurationMs">
+            <summary>
+            The duration of time, in milliseconds, that the server took to process and respond <br/>
+            
+            <remarks>
+            to the request. This is measured from the time the server received the request <br/>
+            until the time the response was sent.<br/>
+            
+            </remarks>
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Workflow.Name">
+            <summary>
+            A user-provided name for this workflow
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.Workflow.Status">
+            <summary>
+            Indicates the readiness and deployment status of a workflow
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.WorkflowInstance.Id">
+            <summary>
+            Unique identifier for the workflow instance
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.WorkflowInstance.Name">
+            <summary>
+            Human-readable name for the workflow instance
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.WorkflowInstance.WorkflowStatus">
+            <summary>
+            Current status of the workflow (e.g. In Progress, Completed, Canceled)
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.WorkflowInstance.TemplateId">
+            <summary>
+            Identifier linking this instance to a workflow template
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.WorkflowInstance.AccountId">
+            <summary>
+            Account under which this workflow instance was initiated
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.WorkflowInstance.StartedAt">
+            <summary>
+            Date and time when the workflow was started
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.WorkflowInstance.StartedBy">
+            <summary>
+            User or system identifier that started this workflow
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.WorkflowInstance.StartedByName">
+            <summary>
+            Display name of the user who started this workflow
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.WorkflowInstance.StartedByRole">
+            <summary>
+            Role of the user who started this workflow (e.g. Preparer)
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.WorkflowInstance.EndedAt">
+            <summary>
+            Date and time when the workflow completed
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.WorkflowInstance.ExpiresAt">
+            <summary>
+            Date and time after which the workflow expires
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.WorkflowInstance.LastModifiedAt">
+            <summary>
+            Date and time when the workflow instance was last modified
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.WorkflowInstance.CanceledAt">
+            <summary>
+            Date and time when the workflow was canceled (if applicable)
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.WorkflowInstance.CanceledBy">
+            <summary>
+            User or system identifier that canceled this workflow (if applicable)
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.WorkflowInstance.TriggerInputs">
+            <summary>
+            Key-value pairs representing the input data required to trigger the workflow.<br/>
+            
+            <remarks>
+            The keys correspond to the `field_name` values defined in the `trigger_input_schema` of the workflow definition.<br/>
+            The values should match the specified `field_data_type` (e.g., string, number, boolean).<br/>
+            Example: {&quot;name&quot;: &quot;John Doe&quot;, &quot;email&quot;: &quot;johndoe@example.com&quot;}<br/>
+            
+            </remarks>
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.WorkflowInstance.TotalSteps">
+            <summary>
+            Total number of steps configured in the workflow
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.WorkflowInstance.LastCompletedStep">
+            <summary>
+            The index of the most recently completed step
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.WorkflowInstance.LastCompletedStepName">
+            <summary>
+            The name of the most recently completed step
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.WorkflowInstance.Tags">
+            <summary>
+            Custom tags for organization or filtering
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.WorkflowInstance.Metadata">
+            <summary>
+            Additional metadata related to this workflow instance
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.WorkflowInstanceCollection.Data">
+            <summary>
+            Array of workflow instances
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.WorkflowInstanceCollection.ResponseMetadata">
+            <summary>
+            Control information and metadata for the response.
+            </summary>
+        </member>
+        <member name="T:Docusign.IAM.Models.Components.WorkflowList">
+            <summary>
+            A list of workflows
+            </summary>
+        </member>
+        <member name="T:Docusign.IAM.Models.Components.WorkflowsListSuccess">
+            <summary>
+            A list of workflows has been successfully returned.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.WorkflowsListSuccess.Data">
+            <summary>
+            A list of workflows
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.WorkflowsListSuccess.ResponseMetadata">
+            <summary>
+            Control information and metadata for the response.
+            </summary>
+        </member>
+        <member name="T:Docusign.IAM.Models.Components.WorkflowTriggerRequirementsSuccess">
+            <summary>
+            Control information and metadata for the response.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.WorkflowTriggerRequirementsSuccess.TriggerEventType">
+            <summary>
+            The type of event that triggers the workflow. In this case, the workflow is initiated<br/>
+            
+            <remarks>
+            by an HTTP request. Future iterations may support additional event types beyond HTTP.<br/>
+            
+            </remarks>
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.WorkflowTriggerRequirementsSuccess.TriggerHttpConfig">
+            <summary>
+            Configuration details specific to HTTP-triggered workflows. This object describes the<br/>
+            
+            <remarks>
+            HTTP method and URL that will trigger the workflow, providing the endpoint and method<br/>
+            that should be used to initiate the workflow.<br/>
+            
+            </remarks>
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.WorkflowTriggerRequirementsSuccess.TriggerInputSchema">
+            <summary>
+            A list of input fields that define the structure of the data required to trigger the workflow.<br/>
+            
+            <remarks>
+            Each item describes a field that must be included in the request when the workflow is triggered.<br/>
+            The schema includes the field name, expected data type, and any default values for the input.<br/>
+            
+            </remarks>
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.WorkflowTriggerRequirementsSuccess.PageLimit">
+            <summary>
+            The maximum number of items that can be returned in a single page.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.WorkflowTriggerRequirementsSuccess.PageTokenNext">
+            <summary>
+            The continuation token used to retrieve a page in a paginated response.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.WorkflowTriggerRequirementsSuccess.RequestId">
+            <summary>
+            Unique identifier for the request, useful for tracking and debugging.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.WorkflowTriggerRequirementsSuccess.ResponseTimestamp">
+            <summary>
+            The timestamp indicating when the response was generated.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Components.WorkflowTriggerRequirementsSuccess.ResponseDurationMs">
+            <summary>
+            The duration of time, in milliseconds, that the server took to process and respond <br/>
+            
+            <remarks>
+            to the request. This is measured from the time the server received the request <br/>
+            until the time the response was sent.<br/>
+            
+            </remarks>
+            </summary>
+        </member>
+        <member name="T:Docusign.IAM.Models.Errors.Error">
+            <summary>
+            Bad Request - The request could not be understood or was missing required parameters.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Errors.Error.ErrorValue">
+            <summary>
+            A message describing the error.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Errors.Error.Code">
+            <summary>
+            HTTP status code for the error.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Errors.Error.Timestamp">
+            <summary>
+            The timestamp when the error occurred.
+            </summary>
+        </member>
+        <member name="T:Docusign.IAM.Models.Requests.AuthorizationCodeGrant">
+            <summary>
+            This grant optionally uses Proof Key for Code Exchange (PKCE) to authenticate securely without requiring a client secret.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Requests.AuthorizationCodeGrant.GrantType">
+            <summary>
+            The grant type. This value must be set to &quot;refresh_token&quot;.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Requests.AuthorizationCodeGrant.RefreshToken">
+            <summary>
+            The refresh token supplied to the callback.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Requests.AuthorizationCodeGrant.ClientId">
+            <summary>
+            The client ID.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Requests.CancelWorkflowInstanceRequest.AccountId">
+            <summary>
+            The unique identifier of the account.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Requests.CancelWorkflowInstanceRequest.WorkflowId">
+            <summary>
+            The unique identifier of the workflow.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Requests.CancelWorkflowInstanceRequest.InstanceId">
+            <summary>
+            Unique identifier for the workflow instance
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Requests.CancelWorkflowInstanceResponse.CancelWorkflowInstanceResponseValue">
+            <summary>
+            Successful response confirming the workflow instance was canceled
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Requests.ConnectedFieldsApiGetTabGroupsResponse.TabInfos">
+            <summary>
+            Successful response
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Requests.CreateAgreementSummaryResponse.AgreementSummary">
+            <summary>
+            A JSON object containing an AI generated summary of an agreement document.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Requests.GetAgreementResponse.Agreement">
+            <summary>
+            A JSON object containing details of the requested agreement document.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Requests.GetAgreementsListRequest.Limit">
+            <summary>
+            The maximum number of items that can be returned in a single page.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Requests.GetAgreementsListRequest.Ctoken">
+            <summary>
+            An opaque token that helps retrieve the a page of data.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Requests.GetAgreementsListResponse.AgreementsResponse">
+            <summary>
+            A collection of agreements.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Requests.GetTokenFromConfidentialAuthCodeResponse.AuthorizationCodeGrantResponse">
+            <summary>
+            OK
+            </summary>
+        </member>
+        <member name="T:Docusign.IAM.Models.Requests.GetTokenFromJWTGrantGrantType">
+            <summary>
+            The grant type.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Requests.GetTokenFromJWTGrantResponse.JWTGrantResponse">
+            <summary>
+            Successful response.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Requests.GetTokenFromPublicAuthCodeResponse.AuthorizationCodeGrantResponse">
+            <summary>
+            OK
+            </summary>
+        </member>
+        <member name="T:Docusign.IAM.Models.Requests.GetTokenFromRefreshTokenGrantType">
+            <summary>
+            The grant type. This value must be set to &quot;refresh_token&quot;.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Requests.GetTokenFromRefreshTokenResponse.Object">
+            <summary>
+            Successful response.
+            </summary>
+        </member>
+        <member name="T:Docusign.IAM.Models.Requests.GetTokenFromRefreshTokenResponseBody">
+            <summary>
+            Successful response.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Requests.GetTokenFromRefreshTokenResponseBody.AccessToken">
+            <summary>
+            The value of the access token. This value will be added to the Authorization header of all Docusign API calls.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Requests.GetTokenFromRefreshTokenResponseBody.TokenType">
+            <summary>
+            The type of token. For access tokens, the value of this will be Bearer.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Requests.GetTokenFromRefreshTokenResponseBody.RefreshToken">
+            <summary>
+            The refresh token.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Requests.GetTokenFromRefreshTokenResponseBody.ExpiresIn">
+            <summary>
+            The number of seconds until the access token expires.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Requests.GetUserInfoResponse.UserInfo">
+            <summary>
+            OK
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Requests.GetWorkflowInstanceRequest.AccountId">
+            <summary>
+            The unique identifier of the account.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Requests.GetWorkflowInstanceRequest.WorkflowId">
+            <summary>
+            The unique identifier of the workflow.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Requests.GetWorkflowInstanceRequest.InstanceId">
+            <summary>
+            Unique identifier for the workflow instance
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Requests.GetWorkflowInstanceResponse.WorkflowInstance">
+            <summary>
+            Successful response containing the workflow instance details
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Requests.GetWorkflowInstancesListRequest.AccountId">
+            <summary>
+            The unique identifier of the account.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Requests.GetWorkflowInstancesListRequest.WorkflowId">
+            <summary>
+            The unique identifier of the workflow.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Requests.GetWorkflowInstancesListResponse.WorkflowInstanceCollection">
+            <summary>
+            Successful response containing a list of workflow instances
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Requests.GetWorkflowsListRequest.AccountId">
+            <summary>
+            The unique identifier of the account.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Requests.GetWorkflowsListResponse.WorkflowsListSuccess">
+            <summary>
+            A list of workflows has been successfully returned.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Requests.GetWorkflowTriggerRequirementsRequest.AccountId">
+            <summary>
+            The unique identifier of the account.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Requests.GetWorkflowTriggerRequirementsRequest.WorkflowId">
+            <summary>
+            The unique identifier of the workflow.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Requests.GetWorkflowTriggerRequirementsResponse.WorkflowTriggerRequirementsSuccess">
+            <summary>
+            Describes the requirements for triggering a workflow
+            </summary>
+        </member>
+        <member name="T:Docusign.IAM.Models.Requests.JWTGrant">
+            <summary>
+            JSON Web Token (JWT) Grant is an OAuth 2.0 flow that is used to grant an access token to service integrations
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Requests.JWTGrant.GrantType">
+            <summary>
+            The grant type.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Requests.JWTGrant.Assertion">
+            <summary>
+            Your JWT
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Requests.TriggerWorkflowRequest.AccountId">
+            <summary>
+            The unique identifier of the account.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Requests.TriggerWorkflowRequest.WorkflowId">
+            <summary>
+            The unique identifier of the workflow.
+            </summary>
+        </member>
+        <member name="P:Docusign.IAM.Models.Requests.TriggerWorkflowResponse.TriggerWorkflowSuccess">
+            <summary>
+            Indicates a trigger has successfully launched a workflow instance
+            </summary>
+        </member>
+        <member name="M:Docusign.IAM.ITabInfo.GetConnectedFieldsTabGroupsAsync(System.String,System.String,Docusign.IAM.Utils.Retries.RetryConfig)">
+            <summary>
+            Returns all tabs associated with the given account
+            
+            <remarks>
+            Returns all tabs associated with the given account. <br/>
+            <br/>
+             **Note**: Unlike the Connected Fields UI, this endpoint returns only fields that are either mandatory or have the **IsRequiredForVerifyingType** &lt;a href=&quot;https://concerto.accordproject.org/docs/design/specification/model-decorators/&quot; target=&quot;_blank&quot;&gt;decorator&lt;/a&gt;
+            </remarks>
+            </summary>
+        </member>
+        <member name="T:Docusign.IAM.Utils.Auth.AuthorizationUrlBuilder">
+            <summary>
+            Builder for creating Docusign authorization URLs.
+            </summary>
+        </member>
+        <member name="M:Docusign.IAM.Utils.Auth.AuthorizationUrlBuilder.Create">
+             <summary>
+             Creates a new instance of the AuthorizationUrlBuilder builder.
+            
+             This method initializes the builder with the default OAuth base path (Demo).
+             </summary>
+        </member>
+        <member name="M:Docusign.IAM.Utils.Auth.AuthorizationUrlBuilder.WithBasePath(Docusign.IAM.Models.Components.OAuthBasePath)">
+            <summary>
+            Sets the environment for the Docusign instance.
+            </summary>
+            <param name="oauthBasePath">Must be Demo or Production.</param>
+            <returns>The builder instance for method chaining.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the environment is invalid.</exception>
+        </member>
+        <member name="M:Docusign.IAM.Utils.Auth.AuthorizationUrlBuilder.WithResponseType(Docusign.IAM.Utils.Auth.AuthorizationUrlResponseType)">
+            <summary>
+            Sets the response type for the OAuth flow.
+            </summary>
+            <param name="responseType">The OAuth response type.</param>
+            <returns>The builder instance for method chaining.</returns>
+        </member>
+        <member name="M:Docusign.IAM.Utils.Auth.AuthorizationUrlBuilder.WithClientId(System.String)">
+            <summary>
+            Sets the client ID for the Docusign application.
+            </summary>
+            <param name="clientId">The client ID.</param>
+            <returns>The builder instance for method chaining.</returns>
+        </member>
+        <member name="M:Docusign.IAM.Utils.Auth.AuthorizationUrlBuilder.AddScopes(System.Collections.Generic.IEnumerable{Docusign.IAM.Models.Components.AuthScope})">
+            <summary>
+            Sets the scopes requested for the OAuth token.
+            </summary>
+            <param name="scopes">The requested scopes.</param>
+            <returns>The builder instance for method chaining.</returns>
+        </member>
+        <member name="M:Docusign.IAM.Utils.Auth.AuthorizationUrlBuilder.AddScopes(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Sets the scopes requested for the OAuth token.
+            </summary>
+            <param name="scopes">The requested scopes.</param>
+            <returns>The builder instance for method chaining.</returns>
+        </member>
+        <member name="M:Docusign.IAM.Utils.Auth.AuthorizationUrlBuilder.WithRedirectUri(System.String)">
+            <summary>
+            Sets the redirect URI to return to after authentication.
+            </summary>
+            <param name="redirectUri">The redirect URI.</param>
+            <returns>The builder instance for method chaining.</returns>
+        </member>
+        <member name="M:Docusign.IAM.Utils.Auth.AuthorizationUrlBuilder.WithState(System.String)">
+            <summary>
+            Sets the state parameter for the authorization request.
+            </summary>
+            <param name="state">The state value.</param>
+            <returns>The builder instance for method chaining.</returns>
+        </member>
+        <member name="M:Docusign.IAM.Utils.Auth.AuthorizationUrlBuilder.WithCodeChallenge(System.String)">
+            <summary>
+            Sets the code challenge for PKCE, and also sets the code challenge method to "S256".
+            </summary>
+            <param name="challenge">The code challenge.</param>
+            <returns>The builder instance for method chaining.</returns>
+        </member>
+        <member name="M:Docusign.IAM.Utils.Auth.AuthorizationUrlBuilder.Build">
+            <summary>
+            Builds the authorization URL.
+            </summary>
+            <returns>A fully formed Docusign authorization URL.</returns>
+            <exception cref="T:System.InvalidOperationException">Thrown when required parameters are missing.</exception>
+        </member>
+        <member name="T:Docusign.IAM.Utils.Auth.JwtAssertionHelper">
+            <summary>
+            Helper class for generating JWT (JSON Web Token) assertions used in Docusign authentication.
+            Provides functionality to create JWT tokens using RSA private keys for Docusign OAuth flows.
+            </summary>
+        </member>
+        <member name="M:Docusign.IAM.Utils.Auth.JwtAssertionHelper.GenerateJWT(System.String,System.String,System.String,Docusign.IAM.Models.Components.OAuthBasePath,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Generates a JWT (JSON Web Token) for Docusign authentication.
+            </summary>
+            <param name="privateKey">The RSA private key in PEM format used to sign the JWT.</param>
+            <param name="clientId">The Docusign integration key (client ID) that will be used as the JWT issuer.</param>
+            <param name="userId">The Docusign user ID (typically an email) that will be used as the JWT subject.</param>
+            <param name="oAuthBasePath">The Docusign OAuth base path that will be used as the JWT audience. Defaults to Demo.</param>
+            <param name="scopes">A list of OAuth scopes to request access to. Defaults to all scopes.</param>
+            <returns>A signed JWT token string in compact serialization format.</returns>
+            <exception cref="T:System.InvalidOperationException">Thrown when the generated JWT is not in valid format.</exception>
+        </member>
+        <member name="M:Docusign.IAM.Utils.Auth.JwtAssertionHelper.LoadRsaFromPem(System.String)">
+            <summary>
+            Loads an RSA private key from PEM format string.
+            </summary>
+            <param name="pem">The PEM-formatted RSA private key string.</param>
+            <returns>An RSA object initialized with the private key.</returns>
+            <remarks>
+            This method handles both PKCS#1 ("-----BEGIN RSA PRIVATE KEY-----") and
+            PKCS#8 format private keys by cleaning and converting the PEM string to the appropriate format.
+            </remarks>
+        </member>
+        <member name="M:Docusign.IAM.Utils.Retries.BackoffStrategy.#ctor(System.Int64,System.Int64,System.Int64,System.Double,System.Double)">
+            <summary>
+            Configures the exponential backoff strategy.
+            </summary>
+            <remarks>
+            The duration between consecutive attempts is calculated as follows:
+                intervalMs = min(maxIntervalMs, initialIntervalMs*(baseFactor^attempts) +/- r)
+            where baseFactor (also referred to as "exponent") is the multiplicative factor
+            and r a random value between 0 and jitterFactor*intervalMs.
+            </remarks>
+            <param name="initialIntervalMs">The initial interval in milliseconds.</param>
+            <param name="maxIntervalMs">The maximum interval in milliseconds.</param>
+            <param name="maxElapsedTimeMs">The maximum elapsed time in milliseconds.</param>
+            <param name="exponent">The base factor used to compute the exponential interval</param>
+            <param name="jitterFactor">The jitter factor used to randomize the backoff interval</param>
+        </member>
+        <member name="M:Docusign.IAM.Utils.Retries.RetryConfig.#ctor(Docusign.IAM.Utils.Retries.RetryConfig.RetryStrategy,Docusign.IAM.Utils.Retries.BackoffStrategy,System.Boolean)">
+            <summary>
+            Selects the retry strategy.
+            </summary>
+            <param name="strategy">The retry strategy.</param>
+            <param name="backoff">The backoff strategy configuration (if applicable)</param>
+            <param name="retryConnectionErrors">Whether to retry on connection errors.</param>
+            <remarks>
+            The backoff strategy is only required if the retry strategy is set to BACKOFF.
+            To disable retries, set the strategy to NONE.
+            </remarks>
+        </member>
+        <member name="M:Docusign.IAM.Utils.ISpeakeasyHttpClient.SendAsync(System.Net.Http.HttpRequestMessage)">
+            <summary>
+            Sends an HTTP request asynchronously.
+            </summary>
+            <param name="request">The HTTP request message to send.</param>
+            <returns>The value of the TResult parameter contains the HTTP response message.</returns>
+        </member>
+        <member name="M:Docusign.IAM.Utils.ISpeakeasyHttpClient.CloneAsync(System.Net.Http.HttpRequestMessage)">
+            <summary>
+            Clones an HTTP request asynchronously.
+            </summary>
+            <remarks>
+            This method is used in the context of Retries. It creates a new HttpRequestMessage instance
+            as a deep copy of the original request, including its method, URI, content, headers and options.
+            </remarks>
+            <param name="request">The HTTP request message to clone.</param>
+            <returns>The value of the TResult parameter contains the cloned HTTP request message.</returns>
+        </member>
+        <member name="M:Docusign.IAM.IWorkflowInstanceManagement.GetWorkflowInstancesListAsync(System.String,System.String,System.String,Docusign.IAM.Utils.Retries.RetryConfig)">
+            <summary>
+            Retrieve All Workflow Instances
+            
+            <remarks>
+            This operation retrieves a list of all available Maestro workflow instances. It returns basic information<br/>
+            about each workflow instance, including its unique identifier (`id`), name, status, timestamps, and<br/>
+            additional metadata.<br/>
+            <br/>
+            The response provides key details that help users understand what workflow instances are in progress<br/>
+            or completed, and the relevant data for each. Each workflow instance entry also includes metadata, such<br/>
+            as who started it, when it was last modified, and how many steps have been completed.<br/>
+            <br/>
+            ### Use Cases:<br/>
+            - Listing all available workflow instances for manual or automated review<br/>
+            - Monitoring which workflow instances are currently running or have finished<br/>
+            - Gathering basic metadata about workflow instances for auditing, logging, or reporting purposes<br/>
+            <br/>
+            ### Key Features:<br/>
+            - **Comprehensive Instance Overview**: Provides a full list of workflow instances, giving visibility<br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+              into all ongoing and completed workflows within the Maestro platform<br/>
+            - **Metadata for Tracking**: Includes helpful metadata like creation time, last modification date,<br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+              and user details to support audit trails<br/>
+            - **Scalable and Future-Proof**: Designed to handle growing numbers of workflow instances as the<br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+              platform scales<br/>
+            
+            </remarks>
+            </summary>
+        </member>
+        <member name="M:Docusign.IAM.IWorkflowInstanceManagement.GetWorkflowInstanceAsync(System.String,System.String,System.String,System.String,Docusign.IAM.Utils.Retries.RetryConfig)">
+            <summary>
+            Retrieve a Workflow Instance
+            
+            <remarks>
+            This operation retrieves a single Maestro workflow instance by its unique identifier (`id`).<br/>
+            It returns the primary details of the workflow instance, including its name, status,<br/>
+            starting information, and other metadata.<br/>
+            <br/>
+            The response provides key details that help users understand the current state of the workflow<br/>
+            instance, when it was started, and who initiated it. Additional metadata is included to support<br/>
+            auditing and reporting within the system.<br/>
+            <br/>
+            ### Use Cases:<br/>
+            - Getting the details of a specific workflow instance for further processing or review<br/>
+            - Monitoring the status of a running workflow instance to determine completion or cancellation<br/>
+            - Accessing metadata for auditing, logging, or reporting on a single workflow instance<br/>
+            <br/>
+            ### Key Features:<br/>
+            - **Single Workflow Instance**: Provides direct access to a specific workflow instance by `id`<br/>
+            - **Detailed Status Information**: Includes the workflow&apos;s start and end times, status, and other lifecycle timestamps<br/>
+            - **Metadata for Tracking**: Useful metadata like who initiated the workflow (`started_by`) and versioning details<br/>
+            - **Future-Proof**: Designed to be extensible if additional fields or nested information are required over time<br/>
+            
+            </remarks>
+            </summary>
+        </member>
+        <member name="M:Docusign.IAM.IWorkflowInstanceManagement.CancelWorkflowInstanceAsync(System.String,System.String,System.String,System.String,Docusign.IAM.Utils.Retries.RetryConfig)">
+            <summary>
+            Cancel a Running Workflow Instance
+            
+            <remarks>
+            This operation cancels a running Maestro workflow instance by its unique identifier (`instanceId`).<br/>
+            Once canceled, the workflow instance will no longer continue executing any remaining steps.<br/>
+            <br/>
+            ### Use Cases:<br/>
+            - Stopping a workflow execution when it is no longer needed or relevant<br/>
+            - Manually intervening in a workflow to prevent it from reaching completion if conditions change<br/>
+            <br/>
+            ### Key Features:<br/>
+            - **Immediate Termination**: Ensures the workflow instance no longer processes subsequent steps<br/>
+            - **Clear Feedback**: Returns a confirmation message including both the instance and workflow identifiers<br/>
+            
+            </remarks>
+            </summary>
+        </member>
+        <member name="F:Docusign.IAM.WorkflowInstanceManagement.GetWorkflowInstancesListServerList">
+            <summary>
+            List of server URLs available for the getWorkflowInstancesList operation.
+            </summary>
+        </member>
+        <member name="F:Docusign.IAM.WorkflowInstanceManagement.GetWorkflowInstanceServerList">
+            <summary>
+            List of server URLs available for the getWorkflowInstance operation.
+            </summary>
+        </member>
+        <member name="F:Docusign.IAM.WorkflowInstanceManagement.CancelWorkflowInstanceServerList">
+            <summary>
+            List of server URLs available for the cancelWorkflowInstance operation.
+            </summary>
+        </member>
+        <member name="M:Docusign.IAM.IWorkflows.GetWorkflowsListAsync(System.String,System.String,Docusign.IAM.Utils.Retries.RetryConfig)">
+            <summary>
+            Retrieve a list of available Maestro workflows
+            
+            <remarks>
+            This operation retrieves a list of all available Maestro workflows. It returns basic information<br/>
+            about each workflow, including its unique identifier (`id`), name, description, and the input<br/>
+            schema required to trigger the workflow.<br/>
+            <br/>
+            The response provides key details that help users identify which workflows are available<br/>
+            and understand the input requirements for triggering each one. Each workflow entry also includes<br/>
+            metadata, such as when it was created, last modified, and by whom.<br/>
+            <br/>
+            This operation is useful for obtaining an overview of all workflows within the system, helping<br/>
+            users and systems know what workflows are defined, what inputs they require, and how they can<br/>
+            be triggered.<br/>
+            <br/>
+            ### Use Cases:<br/>
+            - Listing all available workflows in a system for manual or automated workflow initiation.<br/>
+            - Reviewing the input requirements for a workflow before triggering it programmatically.<br/>
+            - Gathering basic metadata about workflows for auditing, logging, or reporting purposes.<br/>
+            <br/>
+            ### Key Features:<br/>
+            - **Comprehensive Workflow Overview**: Provides a full list of workflows, giving visibility<br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+              into all the automated processes available within the Maestro platform.<br/>
+            - **Input Schema Information**: Each workflow includes its trigger input schema, showing<br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+              what data must be provided when triggering the workflow.<br/>
+            - **Metadata for Tracking**: Useful metadata like creation time, last modification date,<br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+              and user details are included to support tracking and auditing workflows.<br/>
+            - **Future-Proof**: The operation is designed to be expandable as more workflows are added<br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+              or the platform grows, ensuring scalability in the workflow management process.<br/>
+            
+            </remarks>
+            </summary>
+        </member>
+        <member name="M:Docusign.IAM.IWorkflows.GetWorkflowTriggerRequirementsAsync(System.String,System.String,System.String,Docusign.IAM.Utils.Retries.RetryConfig)">
+            <summary>
+            Retrieve trigger requirements for a specific Maestro workflow
+            
+            <remarks>
+            This operation retrieves the configuration and input requirements necessary to trigger a specific<br/>
+            Maestro workflow. It provides detailed information about the `trigger_event_type`, such as HTTP<br/>
+            or other supported types, and specifies the required input schema, including field names, data types,<br/>
+            and any default values.<br/>
+            <br/>
+            This information is essential for understanding the data and parameters required to initiate the<br/>
+            workflow. It enables developers to prepare the necessary inputs and configuration before triggering<br/>
+            the workflow instance, ensuring seamless execution and compliance with workflow requirements.<br/>
+            <br/>
+            ### Use Cases:<br/>
+            - Identifying the required input fields and their data types to successfully trigger the workflow.<br/>
+            - Reviewing the trigger configuration for validation and compliance with expected input.<br/>
+            - Preparing and validating data in advance of triggering the workflow, minimizing runtime errors.<br/>
+            <br/>
+            ### Key Features:<br/>
+            - **Detailed Trigger Input Requirements**: Provides an exhaustive schema of required fields,<br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+              their data types, and optional default values for easy reference and data validation.<br/>
+            - **Trigger Event Type Information**: Specifies the type of event required to initiate the workflow<br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+              (e.g., HTTP), helping developers configure their systems to invoke the workflow appropriately.<br/>
+            - **Configurable for Custom Triggers**: Suitable for custom configurations, enabling flexibility<br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+              in how workflows can be triggered according to system needs.<br/>
+            
+            </remarks>
+            </summary>
+        </member>
+        <member name="M:Docusign.IAM.IWorkflows.TriggerWorkflowAsync(System.String,System.String,Docusign.IAM.Models.Components.TriggerWorkflow,System.String,Docusign.IAM.Utils.Retries.RetryConfig)">
+            <summary>
+            Trigger a new instance of a Maestro workflow
+            
+            <remarks>
+            This operation triggers a new instance of a specified Maestro workflow. When invoked,<br/>
+            the workflow is started based on the provided input data, and the workflow instance<br/>
+            begins executing according to its defined logic and configuration.<br/>
+            <br/>
+            The request requires an `instance_name` and any input data necessary to start the workflow,<br/>
+            as described by the workflow&apos;s `trigger_input_schema`. The `instance_name` is a user-defined<br/>
+            label for tracking the workflow run, while the input data fields should match the schema defined<br/>
+            in the workflow.<br/>
+            <br/>
+            The operation is event-driven and typically triggered by an external HTTP event or system call,<br/>
+            allowing for the automatic execution of complex processes that span multiple systems or components.<br/>
+            <br/>
+            Upon successful execution, the response returns the unique identifier (`id`) for the newly<br/>
+            created workflow instance, along with a URL (`workflow_instance_url`) that can be used to<br/>
+            interact with or track the running instance.<br/>
+            <br/>
+            ### Use Cases:<br/>
+            - Automating user registration workflows where input fields like `name` and `email` are provided.<br/>
+            - Processing financial transactions where details such as `amount` and `currency` are required.<br/>
+            - Sending notifications based on user interactions in other systems.<br/>
+            <br/>
+            ### Key Features:<br/>
+            - **Automated Execution**: Once triggered, the workflow runs until a step requires manual intervention.<br/>
+            - **Input-Driven**: Workflow execution is based on the provided input data, which is validated<br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+              against the workflow&apos;s input schema.<br/>
+            - **Real-Time Triggering**: Designed to be invoked as part of an event-driven architecture,<br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+              allowing for workflows to respond to external events.<br/>
+            - **Tracking and Interaction**: The response includes a URL that allows users to check the status<br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+              of the workflow instance or take further actions while it runs.<br/>
+            
+            </remarks>
+            </summary>
+        </member>
+        <member name="F:Docusign.IAM.Workflows.GetWorkflowsListServerList">
+            <summary>
+            List of server URLs available for the GetWorkflowsList operation.
+            </summary>
+        </member>
+        <member name="F:Docusign.IAM.Workflows.GetWorkflowTriggerRequirementsServerList">
+            <summary>
+            List of server URLs available for the GetWorkflowTriggerRequirements operation.
+            </summary>
+        </member>
+        <member name="F:Docusign.IAM.Workflows.TriggerWorkflowServerList">
+            <summary>
+            List of server URLs available for the TriggerWorkflow operation.
+            </summary>
+        </member>
+    </members>
+</doc>

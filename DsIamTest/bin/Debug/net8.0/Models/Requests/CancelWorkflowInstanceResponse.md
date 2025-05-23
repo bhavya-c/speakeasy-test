@@ -1,0 +1,9 @@
+# CancelWorkflowInstanceResponse
+
+
+## Fields
+
+| Field                                                                                                         | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `HttpMeta`                                                                                                    | [HTTPMetadata](../../Models/Components/HTTPMetadata.md)                                                       | :heavy_check_mark:                                                                                            | N/A                                                                                                           |
+| `CancelWorkflowInstanceResponse`                                                                              | [Models.Components.CancelWorkflowInstanceResponse](../../Models/Components/CancelWorkflowInstanceResponse.md) | :heavy_minus_sign:                                                                                            | Successful response confirming the workflow instance was canceled                                             |
