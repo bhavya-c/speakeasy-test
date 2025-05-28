@@ -36,10 +36,10 @@ The response also includes provisions that outline the key legal, financial, and
 ### Example Usage
 
 ```csharp
-using Docusign.IAM;
-using Docusign.IAM.Models.Components;
+using Docusign.IAM.SDK;
+using Docusign.IAM.SDK.Models.Components;
 
-var sdk = new DocusignIamSDK(accessToken: "<YOUR_ACCESS_TOKEN_HERE>");
+var sdk = new IamClient(accessToken: "<YOUR_ACCESS_TOKEN_HERE>");
 
 var res = await sdk.Navigator.Agreements.GetAgreementsListAsync(
     accountId: "00000000-0000-0000-0000-000000000000",

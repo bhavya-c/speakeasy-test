@@ -1,5 +1,5 @@
 ﻿using Docusign.IAM;
-using Docusign.IAM.Models.Components;
+using Docusign.IAM.SDK;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -19,7 +19,7 @@ namespace DsIamTest
             //var tokenCache = new TokenCache();
             var httpClient = new HttpClient();
 
-            var sdk = DocusignIamSDK.Builder().WithServerUrl(MyConfig.API_URL+"/v1").WithAccessToken(MyConfig.ACCESS_TOKEN).Build();
+            var sdk = IamClient.Builder().WithServerUrl(MyConfig.API_URL+"/v1").WithAccessToken(MyConfig.ACCESS_TOKEN).Build();
 
             try
             {
@@ -48,7 +48,7 @@ namespace DsIamTest
             //    client: customClient
             //);
 
-            var sdk = DocusignIamSDK
+            var sdk = IamClient
                 .Builder()
                 .WithServerUrl(MyConfig.API_URL+"/v1")
                 .WithAccessToken(MyConfig.ACCESS_TOKEN)

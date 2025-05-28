@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Docusign.IAM.SDK.Models.Components;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,25 +9,30 @@ namespace DsIamTest
 {
     public class MyConfig
     {
-        public const string CLIENT_ID = "";
-        public const string CLIENT_SECRET = "";
-        public const string USER_ID = "";
-        public const string ACCESS_TOKEN = "";
-        public const string REFRESH_TOKEN = "";
-        public const string ACCOUNT_ID = "";
-        public const string PRIVATE_KEY = "";
-        public const string EXPIRED_ACCESSTOKEN = "";
+        public const string CLIENT_ID = "337e4b0d-960d-43b7-83ce-5a4a7473c177";
+        public const string CLIENT_SECRET = "1f1d0b1c-df7a-4a25-a836-6fa130365561";
+        public const string USER_ID = "f6c9e287-c8b0-4064-8c3f-7130f1a9ebcf";
+        public const string ACCESS_TOKEN = "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjY4MTg1ZmYxLTRlNTEtNGNlOS1hZjFjLTY4OTgxMjIwMzMxNyJ9.eyJUb2tlblR5cGUiOjUsIklzc3VlSW5zdGFudCI6MTc0ODAwOTIwOCwiZXhwIjoxNzQ4MDM4MDA4LCJVc2VySWQiOiJmNmM5ZTI4Ny1jOGIwLTQwNjQtOGMzZi03MTMwZjFhOWViY2YiLCJzaXRlaWQiOjEsInNjcCI6WyJhZG1fc3RvcmVfdW5pZmllZF9yZXBvX3JlYWQiLCJhZG1fc3RvcmVfdW5pZmllZF9yZXBvX3dyaXRlIiwiYW93X21hbmFnZSIsImltcGVyc29uYXRpb24iLCJzaWduYXR1cmUiXSwiYXVkIjoiMzM3ZTRiMGQtOTYwZC00M2I3LTgzY2UtNWE0YTc0NzNjMTc3IiwiYXpwIjoiMzM3ZTRiMGQtOTYwZC00M2I3LTgzY2UtNWE0YTc0NzNjMTc3IiwiaXNzIjoiaHR0cHM6Ly9hY2NvdW50LWQuZG9jdXNpZ24uY29tLyIsInN1YiI6ImY2YzllMjg3LWM4YjAtNDA2NC04YzNmLTcxMzBmMWE5ZWJjZiIsImF1dGhfdGltZSI6MTc0ODAwNTM2OCwicHdpZCI6IjY3MWQ1OTU3LTM4MTQtNGFhNC04Yzc2LTNlNGRmZWMzZjMzYSJ9.Spac7iCCiP4CNEXQobmgbZn4YRe7IDJP4QRgyTnoWvdZXK9WZzai81MYdApwzbMYhFhz4nMiJeIvhlNbMvEtoUUJQChcKqSYPGK8atV_hs39KB6XUKsILsR7QABrJacQWi0pqkydSts4AIeWkkIUG74ODODdhXe1ajFgmW6NJ4ELpXIJ4h2wfs6Uae5mMzpZkC5nWic2XJc1ZgEqk5vjaPgLpeUdEsCx3VLnfDhyvGVXXrOINO8AqUigekcMAqNIMVTlPRC3uJLN-N07tW2kJJn-iYHji3VjwU-PeQ_48_\r\n_OVmMXZYs8Br8k5w-IGoAwZYTdrCzLRjwNt4AT0mWLhA";
+        public const string REFRESH_TOKEN = "eyJ0eXAiOiJNVCIsImFsZyI6IlJTMjU2Iiwia2lkIjoiNjgxODVmZjEtNGU1MS00Y2U5LWFmMWMtNjg5ODEyMjAzMzE3In0.AQoAAAABAAgABwCAd6njyZ3dSAgAgPcN3Fy13UgCAIfiyfawyGRAjD9xMPGp688VAAEAAAAYAAUAAABRAQAAUgEAAPEAAAAdAAAABQAAAA0AJAAAADMzN2U0YjBkLTk2MGQtNDNiNy04M2NlLTVhNGE3NDczYzE3NyIAJAAAADMzN2U0YjBkLTk2MGQtNDNiNy04M2NlLTVhNGE3NDczYzE3NzAAAPiKt8Od3Ug3AFdZHWcUOKRKjHY-Tf7D8zo.fkWl0T8N0k1Fl5dgPjTI4cnn15OFmIZQIhka8PnD2ebWlr9Qc_-f0ocliUFJoGtb3nDEZkZKZJBt556yjf_Y3U2eFnPZAIKgmEI_ma5CluI9DslOKu6TUusgUx6lnRmbceJWdskK3MlmrJJOvBulTKXvc3CLH09xkCtcWA5qn7SOKJr5LBdgMacErXFCcR0fowbGnwPkyUAl_QzTjD9Ov30iRUsqSHsuamIcYzrtY6TnMjZwuRcyV9R6dH5OdvJzBcbWD5-UciE71aPvUXCh1gh6g1j0e--aWXSiLmdeRpn0JbYGu55ZwIABK1h0gvnyk9rWEkPN8nUR6hEJsZsUKQ";
+        public const string ACCOUNT_ID = "3c9c0391-01ac-4a98-8fab-adb9d0e548d2";
+        public const string PRIVATE_KEY = "-----BEGIN RSA PRIVATE KEY----- MIIEowIBAAKCAQEAkBmf8iiSeFpx+/rNMzsQzneDzsB6vmpckXOX9KhP8YFXOZAe sqzgs3Z2nWGmRVMm71y77YQ8j2E0p9mcBdThXzXL1A1VU9Hm3j7z9Anj09/o4iRn 8WT5rFkGmxAB8a0WXCvhxj6XQ7XhqUQZjHwY6SrTb3hrUiQxF0QWL6G2qkT34K8l vtbsJQ+lKVcofZlExVmNqQaXAeT9BnBWDyjiV0gfrsv3oS5wK3e/wVi2LuwyR85B /84nEfBdo51y8zhLAwYOioMtW9KTwCOvq4akMwk856357RaES/g88LfkRtxfcSK/ cxqfd3d3l2xgnKD4C7R604jTG4Qs2ALfc21D7QIDAQABAoIBAAIYGT1gmRD+MX9f C581ucliWRbxWvyhmOhKj4KwSn8g6SaulpTz/bel86nXBYlRi3SO5V1ENB7E+R9X rSne3YqabR9PCqEooQFfAAEZKVzcJBXbP8Ef6EqjUuerJyK/EvQydWTB5pqxjeQS 7Qh1X5BN6BuL2rVreLoqP2SgUJevWhJzsEkb/KH3MY3/YnZOROyfMwS438/YYGzq 9DKBiWAhSRrR5qsPW50dWuEBlO/Bd9otS/AoRP8EZekgYX4EvwB6zUtGQkIPdHXZ 7Bo61/zoCOqRb9Q7YJRRh1GthU+COVsOnMbSfVTi5aBfMz93XJaBDyFox8/+5MEV 8PIf1pECgYEA4+Fe0WsI68WRPuZ/AP4PIEBl1GAjOkN/Y5JuGVoBV17GO7F9dtX1 1G76P9iVyATygcITTCRvQa8To8Tjnv1BcvAefZKzQE89TpvIRTsU8nUVR3j9mFUs GBv9AFNcsvV+4uybFbjVuJswZa9T7oIVV/BEQzMvSBCZ13Vz159Hj50CgYEAoeGt RFJMRIYoFw0UjaHK/luo2beojiobyeP9/sMog/W1gJk0B83VttMCgfCoERVIH/EM qfsfJs3kNFHS80eLi+xXVOrw3cyThHMINyBtJ+uBudKsa/xut8yW9qx/Dovih3Cr os0rb/oHiuEhkyR7zAustCEfwsl/zZta8a5C3JECgYAMW5JqxOUs8//Wa2WDxkNH unZLOBNw+2wTGEPEOC9Ob6NMZWmqYhv8sy/6+mHVAP+trbqiLG+kHjxwayL04kME WqUspiH2YNWwR55qsrOGGndW8ua9thC4Ffx4Ygzq34lMAQy/9tAQPMo5GXLxwjgq Fqt9AW+U9uGA36uyi76zuQKBgAay6BCjtzQ+uPn7OJaD03qjIGGiD/+SDoRUQvZ/ 7PVI/bHMpTKNegKOyNPHuay7TLjFqNh/49IfQwpHOIuIsmWf6h1Be6YyCQi6GeTu GpZEUKH37dqqH4rLlJOwn7FiaIViTDf4dYu0tQsyNcl5AQZ4lTT/CeltnTRM8X5+ z5WBAoGBAIiOwE56I83EDd128sRWgz75TjsengLXpdUcfR8j36NYR2LxsDpsIiIj n71E5KzCzuW5ElsSkcHeO4jWV8piXNDZBSczwvI1uQaZIB8zSxPcw33n2uVZt+mU t9S04cliFzWZFTdDs0CNQcErpcjaA0B7uONsHYFMHPTygeVxV2/H -----END RSA PRIVATE KEY-----";
+        public const string EXPIRED_ACCESSTOKEN = "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjY4MTg1ZmYxLTRlNTEtNGNlOS1hZjFjLTY4OTgxMjIwMzMxNyJ9.eyJUb2tlblR5cGUiOjUsIklzc3VlSW5zdGFudCI6MTc0NzY1Mjk3OCwiZXhwIjoxNjA5NDU5MjAwLCJVc2VySWQiOiJmNmM5ZTI4Ny1jOGIwLTQwNjQtOGMzZi03MTMwZjFhOWViY2YiLCJzaXRlaWQiOjEsInNjcCI6WyJhZG1fc3RvcmVfdW5pZmllZF9yZXBvX3JlYWQiLCJhZG1fc3RvcmVfdW5pZmllZF9yZXBvX3dyaXRlIiwic2lnbmF0dXJlIiwiYW93X21hbmFnZSJdLCJhdWQiOiIzMzdlNGIwZC05NjBkLTQzYjctODNjZS01YTRhNzQ3M2MxNzciLCJhenAiOiIzMzdlNGIwZC05NjBkLTQzYjctODNjZS01YTRhNzQ3M2MxNzciLCJpc3MiOiJodHRwczovL2FjY291bnQtZC5kb2N1c2lnbi5jb20vIiwic3ViIjoiZjZjOWUyODctYzhiMC00MDY0LThjM2YtNzEzMGYxYTllYmNmIiwiYXV0aF90aW1lIjoxNzQ3NjMxODQ0LCJwd2lkIjoiNjcxZDU5NTctMzgxNC00YWE0LThjNzYtM2U0ZGZlYzNmMzNhIn0.2lHAMmonbiiE6pByuUBfNnwXYKkZL1E6FWjhHMbSyTT55zB4TQ8aGK0izaGr3uY-ymWds5hazvtSDTSvM2wA1HTeAa6LjA651z6-AUX1mkvDC-eGquMTqvbsruiozVPvDgMLUO7Lifg1PBCdD_qPBzqxVLWY2i46LHqU2s95vE7dUoF-28HL0c2wlMojciQVF3anobFOR4LIttmJQPP_gSM7uH8lILkT8ynu61IciT2MWk51aRf38GkEZTaYBKS1N9XUXixoa-qgNWljqoTtZzSPAf9egk3nWRaXQ_-KAfjanwjZH1lZILlr7ljcM7ZIagO7DzPEMLF7X-4Rj8vWyw";
         public const string SERVER_URL = "https://account-d.docusign.com";
         public const string API_URL = "https://api-d.docusign.com";
         public const string REDIRECT_URI = "https://localhost:3000";
-        public const string AUTH_CODE = "";
-        //public static readonly DocusignOAuth2Scope[] ALL_SCOPES = new[] {
-        //                        DocusignOAuth2Scope.AdmStoreUnifiedRepoRead,
-        //                        DocusignOAuth2Scope.ModelsRead,
-        //                        DocusignOAuth2Scope.AdmStoreUnifiedRepoWrite,
-        //                        DocusignOAuth2Scope.Signature,
-        //                        DocusignOAuth2Scope.AowManage
-        //};
-        //public static readonly string[] scopes = ["adm_store_unified_repo_write","models_read","adm_store_unified_repo_read"];
+        public const string CODE_VERIFIER = "MS1Sy4oPPP_UqLbMgmGd-JAba12BXlC6jV5vimmJql4";
+        public const string AUTH_CODE = "eyJ0eXAiOiJNVCIsImFsZyI6IlJTMjU2Iiwia2lkIjoiNjgxODVmZjEtNGU1MS00Y2U5LWFmMWMtNjg5ODEyMjAzMzE3In0.AQoAAAABAAYABwAAqXTGyZ3dSAgAADX7Dcqd3UgCAIfiyfawyGRAjD9xMPGp688VAAEAAAAYAAUAAABRAQAAUgEAAPEAAAAdAAAABQAAAA0AJAAAADMzN2U0YjBkLTk2MGQtNDNiNy04M2NlLTVhNGE3NDczYzE3NyIAJAAAADMzN2U0YjBkLTk2MGQtNDNiNy04M2NlLTVhNGE3NDczYzE3NzcAV1kdZxQ4pEqMdj5N_sPzOjAAAPiKt8Od3Ug.wkQt473JILC2ccbTSZ_b5kmdke3ddTDMAkpW0MpQDYu3LnOVBGMUXY_tSt8UjDsrvkEEjQANbV7F0tb8uSXzweDKLxGQjHjt-DbAaNZJ_vLThYFilAwuFo5fufAfhQfeiUWA9yDthxiw_dPCQQW8xKIQW87AE4H8e-F6Of-sgR3f1nLR7WMZj6p9GfoBWU_s1YY92L5Tv3nIhhCY378FUnNXj4eYUG2IJB9_cCsn3rURtfSYyD54u62ZElB-D5v2ukDOwkd2HpRuBpI-dyMQAHWrG_uhZB5i9yy-3yqaJAsRoTVgWp3uWq6fVgPNzDftr35sQlbgzmvEg_X04CvQ9A";
+
+
+        public const string PKCE_CLIENT_ID = "39084edd-ae38-41a0-9d36-a6fcd120e157";
+        public const string PKCE_AUTH_CODE = "eyJ0eXAiOiJNVCIsImFsZyI6IlJTMjU2Iiwia2lkIjoiNjgxODVmZjEtNGU1MS00Y2U5LWFmMWMtNjg5ODEyMjAzMzE3In0.AQwAAAABAAYABwAASLv2x53dSAgAANRBPsid3UgCAIfiyfawyGRAjD9xMPGp688VAAEAAAAYAAQAAABSAQAAUQEAAAUAAADxAAAADQAkAAAAMzkwODRlZGQtYWUzOC00MWEwLTlkMzYtYTZmY2QxMjBlMTU3IgAkAAAAMzkwODRlZGQtYWUzOC00MWEwLTlkMzYtYTZmY2QxMjBlMTU3QgArAAAAZDZ1Uml3YzVxZXBQQzYxVVlZN0NDUWNNcUpUcFdsNlBFenBUZEFCaVhYMEMAAAA3AFdZHWcUOKRKjHY-Tf7D8zowAAD4irfDnd1I.Xmzuf2j--KwQI1iMhm1qUWwK1P22qudbmRAnoxV5JEdkNsDfsZCa1EW_BCu5Od1Ta0n7S68LUi6FX87Iwo0wyclWRtPMOb52C9qMoM3m6VmXcv72D7OwA_tkJ_iAk6OD72Y2dacZwFTpdt3MwW6_cL6BDFj8xDF_VtGCZ_gKrmbTEwDGFy5rC3z0I89J4ilDRvUK0_Tb1DwsEKMhASC4s9p9ZXgV7EqTRpsDrqb1b0SCmSeaeh-4tiFFRMOWehuVaXDhWogf62pHksIBfxwY7hkuhcAtuBmLj42pF5tTOyZ-AyxTnNYbOeuMYgChgwTJRh7gc4oA5O6q3InkaXHirQ";
+        public static readonly AuthScope[] ALL_SCOPES = new[] {
+                                AuthScope.AdmStoreUnifiedRepoRead,
+                                AuthScope.ModelsRead,
+                                AuthScope.AdmStoreUnifiedRepoWrite,
+                                AuthScope.Signature,
+                                AuthScope.AowManage
+        };
+        public static readonly string[] scopes = ["adm_store_unified_repo_write","models_read","adm_store_unified_repo_read","models_read","signature","aow_manage"];
     }
 }

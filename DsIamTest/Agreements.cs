@@ -1,5 +1,5 @@
 ﻿using Docusign.IAM;
-using Docusign.IAM.Models.Components;
+using Docusign.IAM.SDK;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +14,7 @@ namespace DsIamTest
         [Fact]
         public static async Task GetAgreements()
         {
-            var sdk = DocusignIamSDK.Builder().WithServerUrl(MyConfig.API_URL+"/v1").WithAccessToken(MyConfig.ACCESS_TOKEN).Build();
+            var sdk = IamClient.Builder().WithServerUrl(MyConfig.API_URL+"/v1").WithAccessToken(MyConfig.ACCESS_TOKEN).Build();
 
             var res = await sdk.Navigator.Agreements.GetAgreementsListAsync(
                 accountId: MyConfig.ACCOUNT_ID,

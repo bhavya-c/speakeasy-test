@@ -1,5 +1,6 @@
 ﻿using Docusign.IAM;
-using Docusign.IAM.Models.Components;
+using Docusign.IAM.SDK;
+using Docusign.IAM.SDK.Models.Components;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +15,7 @@ namespace DsIamTest
         [Fact]
         public static async Task GetWorkflows()
         {
-            var sdk = DocusignIamSDK.Builder().WithServerUrl(MyConfig.API_URL+"/v1").WithAccessToken(MyConfig.ACCESS_TOKEN).Build();
+            var sdk = IamClient.Builder().WithServerUrl(MyConfig.API_URL+"/v1").WithAccessToken(MyConfig.ACCESS_TOKEN).Build();
 
             var res = await sdk.Maestro.Workflows.GetWorkflowsListAsync(accountId: MyConfig.ACCOUNT_ID);
             Assert.NotNull(res);
@@ -23,7 +24,7 @@ namespace DsIamTest
 
         [Fact]
         public static async Task TrggerWorkflows() {
-            var sdk = DocusignIamSDK.Builder().WithAccessToken(MyConfig.ACCESS_TOKEN).Build();
+            var sdk = IamClient.Builder().WithAccessToken(MyConfig.ACCESS_TOKEN).Build();
             try
             {
                 var res = await sdk.Maestro.Workflows.TriggerWorkflowAsync(

@@ -1,5 +1,4 @@
-﻿using Docusign.IAM.Utils;
-using System.Diagnostics;
+﻿using Docusign.IAM.SDK.Utils;
 
 public class CustomHttpClient : ISpeakeasyHttpClient
 {

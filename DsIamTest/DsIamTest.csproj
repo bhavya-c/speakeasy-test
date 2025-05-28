@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\docusign-sdk-csharp\src\Docusign\IAM\Docusign.IAM.csproj" />
+    <ProjectReference Include="..\..\docusign-iam-csharp-client-private\src\Docusign\IAM\SDK\Docusign.IAM.SDK.csproj" />
   </ItemGroup>
 
   <ItemGroup>
